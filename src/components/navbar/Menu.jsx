@@ -9,9 +9,7 @@ import {
 import Link from "next/link"
 export function Menu({url,text}){
     const pathName=usePathname()
-
-    
     return(
-         <Link href={url} className='px-4 py-2 bg-white'>{text} </Link>
+         <Link href={url}>{text} </Link>
          )
 }

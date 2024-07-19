@@ -1,4 +1,4 @@
-const baseURL="https://nitro.hubba.cc/gamedata/"
+const baseURL="https://habblum.net/nitrodata/gamedata/json"
 export async function getAllRares(){
 
     try{
