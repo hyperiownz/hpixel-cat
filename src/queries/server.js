@@ -1,12 +1,12 @@
 const baseURL="https://habblum.net/nitrodata/gamedata/json"
-export async function getAllRares(){
+export function getAllRares(setFurniture){
 
     try{
         
-        const res = await fetch(`${baseURL}/FurnitureData.json`,{cache:'no-store'});
-        const data = await res.json();
-        
-     return data?.roomitemtypes.furnitype
+        const res = fetch(`${baseURL}/FurnitureData.json`,{cache:'no-store'})
+        .then(res => res.json())
+        .then(data => setFurniture(data?.roomitemtypes.furnitype))        
+
     }
     catch(error){
         console.log(error)

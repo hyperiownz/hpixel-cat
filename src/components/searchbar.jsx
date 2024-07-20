@@ -1,11 +1,15 @@
 import react from 'react'
+import './styles.css'
 
-const SearchBar = () => {
+const SearchBar = (search, setSearch) => {
+  
+  const searchOnChange = (ev) => {
+    setSearch(ev.target.value)
+  }
+
   return (
-    <form className=''>
-        <div className="relative"> 
-            <input type="search" placeholder='type here' className='w-full p-4 rounded-full bg-slate-800' />
-        </div>
+    <form className="search-bar">
+            <input type="search" value={search} placeholder='Drako dorado...' onInput={searchOnChange}/>
     </form>
   )
 }
