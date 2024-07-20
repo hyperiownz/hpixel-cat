@@ -1,0 +1,7 @@
+.furniture-container {
+    display: flex;
+    flex-direction: row;
+    margin-right: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
